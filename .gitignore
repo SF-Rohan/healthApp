@@ -1,39 +1,62 @@
-# History files
-.Rhistory
-.Rapp.history
+# OSX
+#
+.DS_Store
 
-# Session Data files
-.RData
+# Xcode
+#
+build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
 
-# User-specific files
-.Ruserdata
+# Android/IntelliJ
+#
+build/
+.idea
+.gradle
+local.properties
+*.iml
+*.hprof
 
-# Example code in package build process
-*-Ex.R
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
 
-# Output files from R CMD build
-/*.tar.gz
+# BUCK
+buck-out/
+\.buckd/
+*.keystore
+!debug.keystore
 
-# Output files from R CMD check
-/*.Rcheck/
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
 
-# RStudio files
-.Rproj.user/
+*/fastlane/report.xml
+*/fastlane/Preview.html
+*/fastlane/screenshots
 
-# produced vignettes
-vignettes/*.html
-vignettes/*.pdf
+# Bundle artifact
+*.jsbundle
 
-# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
-.httr-oauth
+# Ruby / CocoaPods
+/ios/Pods/
+/vendor/bundle/
 
-# knitr and R markdown default cache directories
-*_cache/
-/cache/
-
-# Temporary files created by R markdown
-*.utf8.md
-*.knit.md
-
-# R Environment Variables
-.Renviron
