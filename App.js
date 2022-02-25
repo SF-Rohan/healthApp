@@ -16,19 +16,24 @@ import {
   Button,
 } from 'react-native'; 
 import Health from './Health';
+import Health2 from './Health2';
+import Toast from 'react-native-toast-message';
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     // <SafeAreaView style={{}}>
-
+<>
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Welcome" options={{ headerShown: false}} component={WelcomeScreen} />
-        <Stack.Screen name="Health" options={{ headerShown: false}} component={Health} />
+        <Stack.Screen name="Health2" options={{ headerShown: false}} component={Health2} />
+        {/* <Stack.Screen name="Health" options={{ headerShown: false}} component={Health} /> */}
       </Stack.Navigator>
     </NavigationContainer>
+    <Toast />
+    </>
     // </SafeAreaView>
   );
 }

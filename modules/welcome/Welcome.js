@@ -32,7 +32,7 @@ export default class Login extends Component {
         <Text style={styles.btnText2}> HEALTH </Text>
         <TouchableOpacity style={[styles.buttonContainer, styles.loginButton]} 
         onPress={() =>
-          this.props.navigation.navigate('Health')
+          this.props.navigation.navigate('Health2')
         }
         >
           <Text style={styles.loginText}>Login</Text>
