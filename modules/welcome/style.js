@@ -1,0 +1,60 @@
+import { StyleSheet } from 'react-native';
+const styles = StyleSheet.create({
+ftreContainer:{
+		backgroundColor:'black',
+		flex:1,
+		marginTop:70,
+		marginBottom:40,
+		marginLeft:20,
+		marginRight:20,
+		borderRadius:20,
+		borderWidth:4,
+		borderColor:'red'
+	},
+	ftreTitle:{
+		color:'white',
+        fontWeight:'bold',
+		fontSize:20,
+		textAlign:'center',
+		margin:10,	
+	},
+	ftreDescription:{
+		color:'white',
+        fontSize:15,
+		marginRight:20,
+		marginLeft:20
+	},
+	ftreCloseIcon:{
+		alignSelf:'flex-end',
+		flex:0.5,
+		marginRight:10
+	},
+	ftreTitleContainer:{
+		flex:1,
+		flexDirection:'row',
+		justifyContent:'center',
+		alignItems:'center'
+	},
+	ftreDescriptionContainer:{
+		flex:6.5
+	},
+	ftreExitContainer:{
+		flex:2,
+		justifyContent:'flex-start',
+		alignItems:'center',
+	},
+	ftreExitButtonContainer:{
+		width:200,
+		height:40,
+		backgroundColor:'red',
+		borderRadius:10,
+		justifyContent:'center',
+	},
+	ftreExitButtonText:{
+		color:'white',
+		fontSize:20,
+		fontWeight:'bold',
+		textAlign:'center'
+	}
+});
+export default styles;

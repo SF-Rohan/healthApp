@@ -1,13 +1,10 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
- import GoogleFit, { Scopes } from 'react-native-google-fit'
-import React, { useState } from 'react';
-import type {Node} from 'react';
+// In App.js in a new project
+
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import WelcomeScreen from './modules/welcome/Welcome';
+
 import {
   SafeAreaView,
   ScrollView,
@@ -17,70 +14,55 @@ import {
   useColorScheme,
   View,
   Button,
-} from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+} from 'react-native'; 
 import Health from './Health';
 
-// const Health = () => {
+const Stack = createNativeStackNavigator();
 
-//   GoogleFit.checkIsAuthorized().then(() => {
-//     console.log(GoogleFit.isAuthorized) // Then you can simply refer to `GoogleFit.isAuthorized` boolean.
-// })
-//   return (
-//       <View>
-//           <Text>hiiii</Text>
-//       </View>
-//   )
-// }
-
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
+function App() {
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Health />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
+    // <SafeAreaView style={{}}>
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Welcome" options={{ headerShown: false}} component={WelcomeScreen} />
+        <Stack.Screen name="Health" options={{ headerShown: false}} component={Health} />
+      </Stack.Navigator>
+    </NavigationContainer>
+    // </SafeAreaView>
+  );
+}
 
 export default App;
+
+
+
+// [
+//   {
+//       value: 2,
+//       createdAt: "2022-02-24T09:36:57.475Z",
+//       end: "2022-02-22 15:12:36",
+//       id: "1645695417475",
+//       name: "com.google.step_count.delta",
+//       start: "2022-02-22 15:11:36",
+//       type: "STEPS"
+//   },
+//   {
+//       value: 110,
+//       createdAt: "2022-02-24T09:39:45.127Z",
+//       end: "2022-02-22 15:13:36",
+//       id: "1645695585127",
+//       name: "com.google.step_count.delta",
+//       start: "2022-02-22 15:12:36",
+//       type: "STEPS"
+//   },
+//   {
+//       value: 110,
+//       createdAt: "2022-02-24T11:01:57.947Z",
+//       end: "2022-02-22 15:13:36",
+//       id: "1645700517947",
+//       name: "com.google.step_count.delta",
+//       start: "2022-02-22 15:12:36",
+//       type: "STEPS"
+//   }
+// ]
