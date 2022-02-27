@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "postinstall": "npx jetify",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
@@ -15,7 +16,7 @@
     "@react-navigation/native-stack": "^6.5.0",
     "axios": "^0.26.0",
     "react": "17.0.2",
-    "react-native": "0.67.2",
+    "react-native": "0.67.3",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-google-fit": "^0.18.2",
     "react-native-reanimated": "^1.13.4",
@@ -31,6 +32,7 @@
     "babel-jest": "^26.6.3",
     "eslint": "7.14.0",
     "jest": "^26.6.3",
+    "jetifier": "^2.0.0",
     "metro-react-native-babel-preset": "^0.66.2",
     "react-test-renderer": "17.0.2"
   },

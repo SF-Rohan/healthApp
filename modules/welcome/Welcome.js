@@ -13,29 +13,29 @@ export default class Login extends Component {
   constructor(props) {
     super(props);
     state = {
-      email   : '',
+      email: '',
       password: '',
     }
   }
 
   onClickListener = (viewId) => {
-    Alert.alert("Alert", "Button pressed "+viewId);
+    Alert.alert("Alert", "Button pressed " + viewId);
   }
 
   render() {
     return (
-      
+
       <View style={styles.container}>
-        <Image style={styles.bgImage} source={ require("./run.jpeg")}/>
+        <Image style={styles.bgImage} source={require("./run.jpeg")} />
         <Text style={styles.btnText}> HEALTH TRACK</Text>
         <Text style={styles.btnText2}> Track your</Text>
         <Text style={styles.btnText2}> HEALTH </Text>
-        <TouchableOpacity style={[styles.buttonContainer, styles.loginButton]} 
-        onPress={() =>
-          this.props.navigation.navigate('Health2')
-        }
+        <TouchableOpacity style={[styles.buttonContainer, styles.loginButton]}
+          onPress={() =>
+            this.props.navigation.navigate('Health2')
+          }
         >
-          <Text style={styles.loginText}>Login</Text>
+          <Text style={styles.loginText}>Loginin</Text>
         </TouchableOpacity>
       </View>
     );
@@ -53,13 +53,13 @@ const styles = StyleSheet.create({
   inputContainer: {
     borderBottomColor: '#F5FCFF',
     backgroundColor: '#FFFFFF',
-    borderRadius:30,
+    borderRadius: 30,
     borderBottomWidth: 1,
-    width:300,
-    height:45,
-    marginBottom:20,
+    width: 300,
+    height: 45,
+    marginBottom: 20,
     flexDirection: 'row',
-    alignItems:'center',
+    alignItems: 'center',
 
     shadowColor: "#808080",
     shadowOffset: {
@@ -71,37 +71,37 @@ const styles = StyleSheet.create({
 
     elevation: 5,
   },
-  inputs:{
-    height:45,
-    marginLeft:16,
+  inputs: {
+    height: 45,
+    marginLeft: 16,
     borderBottomColor: '#FFFFFF',
-    flex:1,
+    flex: 1,
   },
-  inputIcon:{
-    width:30,
-    height:30,
-    marginRight:15,
+  inputIcon: {
+    width: 30,
+    height: 30,
+    marginRight: 15,
     justifyContent: 'center'
   },
   buttonContainer: {
-    height:45,
+    height: 45,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom:20,
-    width:300,
-    borderRadius:30,
-    backgroundColor:'transparent',
+    marginBottom: 20,
+    width: 300,
+    borderRadius: 30,
+    backgroundColor: 'transparent',
     marginTop: 100,
   },
   btnForgotPassword: {
-    height:15,
+    height: 15,
     flexDirection: 'row',
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
-    marginBottom:10,
-    width:300,
-    backgroundColor:'transparent'
+    marginBottom: 10,
+    width: 300,
+    backgroundColor: 'transparent'
   },
   loginButton: {
     backgroundColor: "#00b5ec",
@@ -118,29 +118,29 @@ const styles = StyleSheet.create({
   },
   loginText: {
     color: 'white',
-    fontWeight:'bold',
+    fontWeight: 'bold',
     fontSize: 20,
 
   },
-  bgImage:{
+  bgImage: {
     flex: 1,
     position: 'absolute',
     width: '100%',
     height: '100%',
     justifyContent: 'center',
   },
-  btnText:{
-    color:"black",
-    fontWeight:'bold',
+  btnText: {
+    color: "black",
+    fontWeight: 'bold',
     fontSize: 36,
     textAlign: 'left',
     width: '100%',
     marginLeft: 30
   },
-  btnText2:{
-    color:"black",
-    fontWeight:'bold',
-    fontSize:20,
+  btnText2: {
+    color: "black",
+    fontWeight: 'bold',
+    fontSize: 20,
     alignContent: 'flex-start',
     marginLeft: 30,
     textAlign: 'left',
